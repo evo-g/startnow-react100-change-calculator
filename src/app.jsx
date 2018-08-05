@@ -87,15 +87,15 @@ class App extends Component {
               <div className='panel-heading'>Enter Information</div>
               <div className='panel-body'>
                 <div className='form-group'>
-                  <label for='amountDue'>How much is due?</label>
-                  <input name='amountDue' onChange={this.updateAmountDue} value={this.state.amountDue} className='form-control input-md' />
+                  <label for='amountDue' >How much is due?</label>
+                  <input name='amountDue' placeholder='0' onChange={this.updateAmountDue} value={this.state.amountDue} className='form-control input-md' />
                 </div>
                 <div className='form-group'>
                   <label for='amountReceived'>How much was received?</label>
-                  <input name='amountReceived' onChange={this.updateAmountReceived} value={this.state.amountReceived} className='form-control input-md' />
+                  <input name='amountReceived' placeholder='0' onChange={this.updateAmountReceived} value={this.state.amountReceived} className='form-control input-md' />
                 </div>
                 <div className='panel-footer'>
-                  <button name='button' onClick={this.handleClick} className='btn btn-primary form-control'>Calculate change</button>
+                  <button name='button' onClick={this.handleClick} className='btn btn-primary btn-block form-control'>Calculate change</button>
                 </div>
               </div>
             </div>
@@ -108,69 +108,53 @@ class App extends Component {
                 </div>
                 <div className='row'>
                   <div className='col-md-3'>
-                    <div className='panel panel-default'>
-                      <div className='well panel-footer'>
-                        <h4 className='text-center'>Twenties</h4>
-                        <p name='output-twenties' className='lead text-center'>{this.state.twenties}</p>
-                      </div>
+                    <div className='card'>
+                      <h4 className='text-center'>Twenties</h4>
+                      <p name='output-twenties' className='lead text-center'>{this.state.twenties}</p>
+                    </div>
+                  </div>
+                  <div className='col-md-3'>
+                    <div className='card'>
+                      <h4 className='text-center'>Tens</h4>
+                      <p name='output-tens' className='lead text-center'>{this.state.tens}</p>
                     </div>
                   </div>
                   <div className='col-md-3'>
                     <div className='panel panel-default'>
-                      <div className='well panel-footer'>
-                        <h4 className='text-center'>Tens</h4>
-                        <p name='output-tens' className='lead text-center'>{this.state.tens}</p>
-                      </div>
+                      <h4 className='text-center'>Fives</h4>
+                      <p name='output-fives' className='lead text-center'>{this.state.fives}</p>
                     </div>
                   </div>
                   <div className='col-md-3'>
-                    <div className='panel panel-default'>
-                      <div className='well panel-footer'>
-                        <h4 className='text-center'>Fives</h4>
-                        <p name='output-fives' className='lead text-center'>{this.state.fives}</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='col-md-3'>
-                    <div className='panel panel-default'>
-                      <div className='well panel-footer'>
-                        <h4 className='text-center'>Ones</h4>
-                        <p name='output-ones' className='lead text-center'>{this.state.ones}</p>
-                      </div>
+                    <div className='card'>
+                      <h4 className='text-center'>Ones</h4>
+                      <p name='output-ones' className='lead text-center'>{this.state.ones}</p>
                     </div>
                   </div>
                 </div>
                 <div className='row'>
                   <div className='col-md-3'>
-                    <div className='panel panel-default'>
-                      <div className='well panel-footer'>
-                        <h4 className='text-center'>Quarters</h4>
-                        <p name='output-quarters' className='lead text-center'>{this.state.quarters}</p>
-                      </div>
+                    <div className='card'>
+                      <h4 className='text-center'>Quarters</h4>
+                      <p name='output-quarters' className='lead text-center'>{this.state.quarters}</p>
                     </div>
                   </div>
                   <div className='col-md-3'>
-                    <div className='panel panel-default'>
-                      <div className='well panel-footer'>
-                        <h4 className='text-center'>Dimes</h4>
-                        <p name='output-dimes' className='lead text-center'>{this.state.dimes}</p>
-                      </div>
+                    <div className='card'>
+                      <h4 className='text-center'>Dimes</h4>
+                      <p name='output-dimes' className='lead text-center'>{this.state.dimes}</p>
                     </div>
                   </div>
                   <div className='col-md-3'>
-                    <div className='panel panel-default'>
-                      <div className='well panel-footer'>
-                        <h4 className='text-center'>Nickels</h4>
-                        <p name='output-nickels' className='lead text-center'>{this.state.nickels}</p>
-                      </div>
+                    <div className='card'>
+                      <h4 className='text-center'>Nickels</h4>
+                      <p name='output-nickels' className='lead text-center'>{this.state.nickels}</p>
                     </div>
                   </div>
                   <div className='col-md-3'>
-                    <div className='panel panel-default'>
-                      <div className='well panel-footer'>
-                        <h4 className='text-center'>Pennies</h4>
-                        <p name='output-pennies' className='lead text-center'>{this.state.pennies}</p>
-                      </div>
+                    <div className='card'>
+                      <h4 className='text-center'>Pennies</h4>
+                      <p name='output-pennies' className='lead text-center'>{this.state.pennies}</p>
                     </div>
                   </div>
                 </div>
